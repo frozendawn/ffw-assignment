@@ -42,9 +42,11 @@ const EditBanner = (props) => {
             headers: {
                 'Content-Type': 'application/json'
             }
-        })
+        }).finally(() => {
+            history.push(`/banners/${params.id}`);
+        });
 
-        history.goBack();
+
     }
 
     const imgUrlChangeHandler = () => {

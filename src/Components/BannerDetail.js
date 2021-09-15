@@ -17,9 +17,8 @@ const BannerDetail = (props) => {
             setBannerDetail(data);
         }
         console.log('useEffect run in bannerDetail')
-        console.log('loggin props.location in bannerDetail', props.location)
         fetchBanner();
-    },[props.location,params])
+    },[params,bannerDetail])
 
 
     const onEditHandler = (e) => {
@@ -33,9 +32,11 @@ const BannerDetail = (props) => {
             headers: {
                 'Content-Type': 'application/json'
               }
+        }).finally(() => {
+            history.replace('/banners');
         })
 
-        history.replace('/banners')
+        
     }
 
 
