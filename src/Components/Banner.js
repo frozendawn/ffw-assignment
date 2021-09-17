@@ -11,11 +11,6 @@ const Banner = (props) => {
 
     }
 
-
-
-
-
-
     return (
         <div className={styles.Banner}>
             <div className={styles['image-container']}>

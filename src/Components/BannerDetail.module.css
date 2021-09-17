@@ -24,3 +24,47 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
+
+.actions button {
+    color: #fff;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    outline:none;
+
+}
+
+.green {
+    background:#87bc58;
+    color:#fff;
+    box-shadow: 0 3px 0 #6ea140;   
+}
+
+.green:hover{
+    background:#c0da82; 
+}
+
+.red{
+    background:#e84c3d;
+    color:#fff;
+    box-shadow: 0 3px 0 #d82a1a;
+}
+
+.red:hover{
+    background:#f57b8a;    
+}
+
+.yellow{
+    background:#fac75a;
+    color:#fff;
+    box-shadow: 0 3px 0 #f9b629;
+}
+.yellow:hover{
+    background:#fce17a;    
+}

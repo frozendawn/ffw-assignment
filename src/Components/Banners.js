@@ -24,7 +24,6 @@ const Banners = (props) => {
 
             setBanners(convertedData);
         }
-        /* console.log('loggin props.location in banners', props.location) */
         console.log('useEffect run in banners')
         fetchBanners();
     },[])

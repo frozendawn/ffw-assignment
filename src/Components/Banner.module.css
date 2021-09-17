@@ -4,11 +4,14 @@
     flex-direction: column;
     height: 427px;
     width: 640px;
-    border: 2px solid black;
-    margin: 10px 0;
+    margin: 70px 0;
+
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .image-container {
+    width: 100%;
     overflow: hidden;
 }
 
@@ -19,4 +22,27 @@
 
 .description-container {
 
+}
+
+.description-container p {
+    margin-left: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font: inherit;
+    cursor: pointer;
+    color: #009ACD;
+    border: 1px solid #009ACD;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
 }

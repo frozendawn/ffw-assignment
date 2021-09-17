@@ -12,3 +12,15 @@ ul a {
 ul a:hover {
     opacity: 70%;
 }
+
+.Logout {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    border: none;
+    font-size: inherit;
+}
+
+.Logout:hover {
+    opacity: 70%;
+}

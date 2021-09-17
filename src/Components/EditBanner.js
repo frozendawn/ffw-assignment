@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams, useHistory } from "react-router";
+import styles from './EditBanner.module.css';
 
 const EditBanner = (props) => {
 
@@ -61,10 +62,24 @@ const EditBanner = (props) => {
 
     return (
         <form onSubmit={onSubmitHandler}>
+        <div className={styles["input-container"]}>
+          <div className={styles["img-container"]}>
             <input type="text" placeholder="img url" ref={imgRef} value={imgValue} onChange={imgUrlChangeHandler}></input>
+          </div>
+  
+          <div className={styles["text-container"]}>
             <textarea ref={descriptionRef} value={descriptionValue} onChange={descriptionChangeHandler}></textarea>
-            <button>Submit</button>
-        </form>
+          </div>
+        </div>
+        <div className={styles["button-container"]}>
+          <button>Submit</button>
+        </div>
+      </form>
+
+
+
+
+
     )
 }
 

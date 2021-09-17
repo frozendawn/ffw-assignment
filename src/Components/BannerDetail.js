@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router';
+import { exportComponentAsJPEG } from 'react-component-export-image';
+
 
 import styles from './BannerDetail.module.css';
 
@@ -8,6 +10,7 @@ const BannerDetail = (props) => {
     const history = useHistory();
     const params = useParams();
     const [bannerDetail, setBannerDetail] = useState({});
+    const componentRef = useRef();
 
     useEffect(() => {
         const fetchBanner = async () => {
@@ -39,10 +42,9 @@ const BannerDetail = (props) => {
         
     }
 
-
-
     return (
-        <section className={styles.detail}>
+        <section className={styles.detail} >
+            <div ref={componentRef}>
             <div className={styles['image-container']}>
                 <img
                     src={bannerDetail.img}
@@ -52,9 +54,11 @@ const BannerDetail = (props) => {
             <div className={styles['description-container']}>
                 <p>{bannerDetail.description}</p>
             </div>
+            </div>
             <div className={styles.actions}> 
-                <button onClick={onEditHandler}>Edit</button>
-                <button onClick={onDeleteHandler}>Delete</button>
+                <button className={styles.green} onClick={onEditHandler}>Edit</button>
+                <button className={styles.red} onClick={onDeleteHandler}>Delete</button>
+                <button className={styles.yellow} onClick={() => exportComponentAsJPEG(componentRef)}>Export to img</button>
             </div>
 
         </section>
