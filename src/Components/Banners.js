@@ -8,6 +8,7 @@ const Banners = (props) => {
     const [banners, setBanners] = useState([]);
 
     useEffect(() => {
+        console.log('logging process.env ',process.env);
         const fetchBanners = async () => {
             const response = await fetch('https://ffw-assignment-default-rtdb.europe-west1.firebasedatabase.app/banners.json');
             const data = await response.json();

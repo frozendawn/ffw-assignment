@@ -16,7 +16,7 @@ const SignIn = (props) => {
     e.preventDefault();
 
     fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBKfr13yjxTuQWfDzzZuB7tBbaeWx1UW5M",
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_FIREBASE_WEB_API_KEY}`,
       {
         method: "POST",
         body: JSON.stringify({

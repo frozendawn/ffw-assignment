@@ -33,6 +33,7 @@ form {
     border-bottom: 2px solid #E6EDF1;
     border-radius: 5px;
     padding-left: 10px;
+    color: #46444E;
 }
 
 .passwordInput-container {
@@ -55,6 +56,7 @@ form {
     border-bottom: 2px solid #E6EDF1;
     border-radius: 5px;
     padding-left: 10px;
+    color: #46444E;
 }
 
 .button-container {
